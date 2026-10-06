@@ -1,0 +1,23 @@
+Future<void> main() async {
+  String customerName = 'Timothy John';
+  int itemQuantity = 7;
+  double itemUnitPrice = 18.50;
+  bool isLoyaltyMember = true;
+
+  double subtotal = itemQuantity * itemUnitPrice;
+  int fullBoxesNeeded = itemQuantity ~/ 3;
+  int remainingItems = itemQuantity % 3;
+
+  bool qualifiesForFreeShipping = subtotal >= 100.00;
+
+  print('--- Order Summary for $customerName ---');
+  print('Customer Loyalty Member: $isLoyaltyMember');
+  print('Item Quantity: $itemQuantity at \$$itemUnitPrice each');
+  print('Subtotal Amount: \$$subtotal');
+  print(
+    'Packaging: $fullBoxesNeeded full box(es) of 3, with $remainingItems leftover item(s).',
+  );
+  print(
+    'Qualifies for Free Shipping (Orders >= \$100): $qualifiesForFreeShipping',
+  );
+}
