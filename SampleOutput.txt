@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main() {
+    double item_price;
+    int quantity;
+    double available_budget;
+    double total_cost;
+    double remaining_budget;
+    char* within_budget;
+    char* valid_purchase;
+
+
+    printf("==TECHNOLOGY PURCHASE CALCULATOR==\n");
+    printf("Enter item price: ");
+    if (scanf("%lf", &item_price) != 1) {
+        printf("Invalid input for price.\n");
+        return 1;
+    }
+    printf("Enter quantity: ");
+    if (scanf("%d", &quantity) != 1) {
+        printf("Invalid input for quantity.\n");
+        return 1;
+    }
+    printf("Enter available budget: ");
+    if (scanf("%lf", &available_budget) != 1) {
+        printf("Invalid input for budget.\n");
+        return 1;
+    }
+ --- Order Summary for Timothy John ---
+Customer Loyalty Member: true
+Item Quantity: 7 at $18.5 each
+Subtotal Amount: $129.5
+Packaging: 2 full box(es) of 3, with 1 leftover item(s).
+Qualifies for Free Shipping (Orders >= $100): true
